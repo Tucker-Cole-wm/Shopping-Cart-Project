@@ -25,7 +25,7 @@ if ($conn->connect_error) {
     <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
 <body>
-<h1>Graphics Cards</h1>
+<h1>New York Venues</h1>
 <ul>
     <li><a href="home.php">Home</a></li>
     <li><a href="About.php">About</a></li>
