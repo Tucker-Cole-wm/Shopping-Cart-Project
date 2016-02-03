@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #383838;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+    opacity: 0.33;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #7a7a7a;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body {
+    background-image: url("http://archwall.xyz/wp-content/uploads/2015/10/skyscrapers-new-york-reflection-skyscrapers-city-lights-harbour-night-panorama-pictures.jpg");
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
