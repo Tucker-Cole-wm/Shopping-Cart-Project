@@ -33,12 +33,12 @@ li a:hover {
     background-color: #4CAF50;
     color: white;
 }
-/*
+
 body {
     background-image: url("http://archwall.xyz/wp-content/uploads/2015/10/skyscrapers-new-york-reflection-skyscrapers-city-lights-harbour-night-panorama-pictures.jpg");
     background-size: 100%;
 }
-*/
+
 body#About {
     background-image: url("http://www.bitboxnewyork.com/dogecoin/templates/bbox2/images/bg-new-york.jpg");
     background-size: 100% 1000px;
@@ -46,8 +46,18 @@ body#About {
     margin: 0;
 }
 
-body#F.A.Q. {
+body#FAQ {
     background-image: url("https://newevolutiondesigns.com/images/freebies/new-york-manhattan-3.jpg");
+    background-size: 100%;
+}
+
+body#contact {
+    background-image: url("https://www.thesolemates.com/uploads/blog/new-york-wallpaper-22.jpg");
+    background-size: 100%;
+}
+
+body#products {
+    background-image: url("https://nimbus-t.com/wp-content/uploads/2015/11/Cityscape-New-York-At-Evening-Wallpaper.jpg");
     background-size: 100%;
 }
 

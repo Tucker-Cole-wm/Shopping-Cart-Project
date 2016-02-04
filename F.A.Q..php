@@ -26,7 +26,7 @@ if ($conn->connect_error) {
     <title>New York Apartments</title>
     <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
-<body id="F.A.Q.">
+<body id="FAQ">
 <div class="aboutUl">
     <ul>
         <li><a href="home.php">Home</a></li>
