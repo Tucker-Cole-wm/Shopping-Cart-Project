@@ -1,18 +1,26 @@
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 200px;
+    height: 100%;
     background-color: #383838;
+    position: absolute;
+    alignment: left;
+    top: 0;
 }
 
 li a {
     display: block;
     color: #ffffff;
-    padding: 8px 0 8px 0;
+    padding: 8px 0 50px 0;
     text-decoration: none;
     opacity: 0.33;
     filter: alpha(opacity=40); /* For IE8 and earlier */
+    font-size: 2em;
+}
+li.copyright {
+    font-size: 20px;
 }
 
 /* Change the link color on hover */
@@ -25,9 +33,21 @@ li a:hover {
     background-color: #4CAF50;
     color: white;
 }
-
+/*
 body {
     background-image: url("http://archwall.xyz/wp-content/uploads/2015/10/skyscrapers-new-york-reflection-skyscrapers-city-lights-harbour-night-panorama-pictures.jpg");
+    background-size: 100%;
+}
+*/
+body#About {
+    background-image: url("http://www.bitboxnewyork.com/dogecoin/templates/bbox2/images/bg-new-york.jpg");
+    background-size: 100% 1000px;
+    padding: 0;
+    margin: 0;
+}
+
+body#F.A.Q. {
+    background-image: url("https://newevolutiondesigns.com/images/freebies/new-york-manhattan-3.jpg");
     background-size: 100%;
 }
 
@@ -35,4 +55,18 @@ h1 {
     text-align: center;
     color: white;
     font-family: sans-serif;
+}
+
+
+
+div.aboutUl {
+    display: inline-block;
+}
+
+div.aboutContent {
+    display: inline-block;
+    width: 75%;
+    padding-left: 250px;
+    background-color: white;
+
 }
