@@ -1,9 +1,12 @@
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 200px;
+    height: 740px;
     background-color: #383838;
+    position: absolute;
+    top: 0px;
 }
 
 li a {
@@ -35,4 +38,23 @@ h1 {
     text-align: center;
     color: white;
     font-family: sans-serif;
+}
+
+body#About {
+    background-image: url("http://www.bitboxnewyork.com/dogecoin/templates/bbox2/images/bg-new-york.jpg");
+    background-size: 100% 1000px;
+    padding: 0;
+    margin: 0;
+}
+
+div.aboutUl {
+    display: inline-block;
+}
+
+div.aboutContent {
+    display: inline-block;
+    width: 75%;
+    padding-left: 250px;
+    background-color: white;
+
 }
