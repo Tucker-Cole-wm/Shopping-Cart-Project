@@ -19,6 +19,7 @@ li a {
     filter: alpha(opacity=40); /* For IE8 and earlier */
     font-size: 2em;
 }
+
 li.copyright {
     font-size: 20px;
 }
@@ -34,9 +35,11 @@ li a:hover {
     color: white;
 }
 
+/* body tag for the home page*/
 body {
     background-image: url("http://archwall.xyz/wp-content/uploads/2015/10/skyscrapers-new-york-reflection-skyscrapers-city-lights-harbour-night-panorama-pictures.jpg");
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 body#About {
@@ -67,8 +70,6 @@ h1 {
     font-family: sans-serif;
 }
 
-
-
 div.aboutUl {
     display: inline-block;
 }
@@ -78,5 +79,4 @@ div.aboutContent {
     width: 75%;
     padding-left: 250px;
     background-color: white;
-
 }

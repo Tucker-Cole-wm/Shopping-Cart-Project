@@ -56,6 +56,14 @@ if ($conn->connect_error) {
                 <td>Phone Number</td>
                 <td>Phone Number</td>
             </tr>
+            <tr>
+                <td>Address</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td>Fax</td>
+            </tr>
         </table>
     </div>
 </div>
