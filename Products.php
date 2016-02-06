@@ -53,19 +53,19 @@ if ($conn->connect_error) {
 <div class="aboutContent">
     <table border="1px">
         <tr>
-            <td>Apartment 1</td>
-            <td>Apartment 2</td>
-            <td>Apartment 3</td>
+            <td><img src="http://www.idesignarch.com/wp-content/uploads/Remodelled-Rooftop-Apartment-New-York_3.jpg" height="330px" width="330px"></td>
+            <td><img src="http://luxuryrentalsmanhattan.com/sites/default/files/uploads/OneMiMATower.jpg" height="330px" width="330px"></td>
+            <td><img src="https://silversuitesresidences.com/wp-content/uploads/2013/02/2bdrm_a-1000x445.jpg" height="330px" width="330px"></td>
         </tr>
         <tr>
-            <td>Apartment 4</td>
-            <td>Apartment 5</td>
-            <td>Apartment 6</td>
+            <td><img src="http://www.ivettearango.com/wp-content/uploads/2011/10/Davis-Seating-Day-view.jpg" height="330px" width="330px"></td>
+            <td><img src="http://metroloftnyc.com/wp-content/uploads/2009/08/New-York-Apartments-11.jpg" height="330px" width="330px"></td>
+            <td><img src="http://cdn.home-designing.com/wp-content/uploads/2013/04/Clock-Tower-Apartment-neutral-sitting-area-with-views-to-New-York-City-and-statement-soft-furnishings.jpg" height="330px" width="330px"></td>
         </tr>
         <tr>
-            <td>Apartment 7</td>
-            <td>Apartment 8</td>
-            <td>Apartment 9</td>
+            <td><img src="http://www.blogcdn.com/slideshows/images/slides/304/793/5/S3047935/slug/l/432pa-view-from-dining-room-looking-south-copyright-dbox-for-1.jpg" height="330px" width="330px"></td>
+            <td><img src="http://edc.h-cdn.co/assets/15/08/980x490/landscape_1424208961-unknown-9.jpeg" height="330px" width="330px"></td>
+            <td><img src="http://cdn.myfancyhouse.com/wp-content/uploads/2013/11/Superb-Apartment-in-Soho-New-York-1.jpg" height="330px" width="330px"></td>
         </tr>
     </table>
 </div>
