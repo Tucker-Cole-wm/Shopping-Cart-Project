@@ -31,7 +31,6 @@ if ($conn->connect_error) {
         <li><a href="Contact.php">Contact</a></li>
         <li><a href="Products.php">Products</a></li>
         <li><a href="shoppingCart.php">Shopping Cart</a></li>
-        <li><a href="Checkout.php">Checkout</a></li>
         <li><a href="F.A.Q..php">F.A.Q.</a></li>
         <li><a href="Account.php">Account</a></li>
         <br>
