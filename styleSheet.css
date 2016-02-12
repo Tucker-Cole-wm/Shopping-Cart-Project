@@ -89,3 +89,8 @@ div.productTable {
     padding: 0;
     margin: 0;
 }
+
+li {
+    padding-left: 5%;
+    padding-right: 3%;
+}
