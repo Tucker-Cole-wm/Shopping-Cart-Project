@@ -76,6 +76,7 @@ div.aboutContent {
     display: inline-block;
     width: 75%;
     padding-left: 250px;
+    background-color: white;
 }
 
 div.productContent {
@@ -93,4 +94,14 @@ div.productTable {
 li {
     padding-left: 5%;
     padding-right: 3%;
+}
+
+div.login {
+    display: inline-block;
+    padding-left: 250px;
+    width: 75%;
+}
+
+#login {
+    color: white;
 }

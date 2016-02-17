@@ -1,22 +1,35 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: session2
- * Date: 2/2/16
- * Time: 5:21 PM
- */
-$servername = "localhost";
-$username = "root";
-$password = "root";
-
-//create connection
-$conn = new mysqli($servername, $username, $password);
-
-//check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+require_once('connect.php');
+function retireOrder($conn) {
+    $token = getToken();
+    $sql = 'UPDATE users u LEFT JOIN orders o ON u.id = o.users_id AND o.status = "new" SET o.status = "old" WHERE u.token = ?';
+    $stmt = $conn->prepare($sql);
+    if ($stmt->execute(array($token))) {
+    }
+}
+function createNewOrder($conn) {
+    $token = getToken();
+    $sql = 'INSERT INTO orders (users_id, status) (SELECT u.id, "new" FROM users u WHERE u.token = ?)';
+    $stmt = $conn->prepare($sql);
+    if ($stmt->execute(array($token))) {
+    }
+}
+function checkout($conn) {
+    retireOrder($conn);
+    createNewOrder($conn);
+    echo 'Checkout Successful';
+}
+function getToken() {
+    if (isset($_COOKIE['token'])) {
+        return $_COOKIE['token'];
+    }
+    else {
+        header('location:/SimpleCart/login/');
+    }
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <head>
@@ -33,17 +46,18 @@ if ($conn->connect_error) {
         <li><a href="Products.php">Products</a></li>
         <li><a href="shoppingCart.php">Shopping Cart</a></li>
         <li><a href="F.A.Q..php">F.A.Q.</a></li>
-        <li><a href="Account.php">Account</a></li>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <li><a href="login.php">Login</a></li>
         <li class="copyright"> © New York Apartments</li>
     </ul>
 </div>
 <h1>Shopping Cart</h1>
+
+<div>
+    <?php
+    if(isset($_POST['checkout'])) {
+        checkout($dbh);
+    }
+    ?>
+</div>
 
 </body>

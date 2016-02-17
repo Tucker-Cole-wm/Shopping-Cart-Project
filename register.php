@@ -36,12 +36,18 @@ function generateToken() {
     <title>Register</title>
 </head>
 <body>
-<div>
-    <a href="/SimpleCart">Home</a>
-    <a href="/SimpleCart/login">Login</a>
-    <a href="/SimpleCart/register">Register</a>
-    <a href="/SimpleCart/cart">Cart</a>
-</div><br><br>
+<div class="aboutUl">
+    <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="About.php">About</a></li>
+        <li><a href="Contact.php">Contact</a></li>
+        <li><a href="Products.php">Products</a></li>
+        <li><a href="shoppingCart.php">Shopping Cart</a></li>
+        <li><a href="F.A.Q..php">F.A.Q.</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li class="copyright"> © New York Apartments</li>
+    </ul>
+</div>
 <?php
 if(isset($_POST['register'])) {
     register($dbh);
