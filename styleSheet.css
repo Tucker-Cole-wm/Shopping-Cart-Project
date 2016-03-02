@@ -81,8 +81,8 @@ div.aboutContent {
 
 div.productContent {
     display: inline-block;
-    width: 75%;
-    padding-left: 250px;
+    width: 65%;
+    padding-left: 20%;
 }
 
 div.productTable {
@@ -100,8 +100,8 @@ div.login {
     display: inline-block;
     padding-left: 250px;
     width: 75%;
+    color: white;
 }
 
 #login {
-    color: white;
 }

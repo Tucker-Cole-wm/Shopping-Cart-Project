@@ -1,5 +1,5 @@
 <?php
-require_once ('connect.php');
+require_once('connect.php');
 
 function getProducts($conn) {
     $sql = 'SELECT * FROM products ORDER BY name';
@@ -12,7 +12,7 @@ function getProducts($conn) {
                 $counter = 0;
                 $products .= '<tr>';
             }
-           $products .= '
+            $products .= '
             <td><img src="'.$row['image'].'" height="300px" width="300px">
                 <p>'.$row['name'].'</p>
                 <p>'.$row['description'].'</p>
@@ -23,15 +23,17 @@ function getProducts($conn) {
                 <input type="submit" name="add" value="ADD"/>
                 </form></td>
         ';
-        $counter++;
-        if ($counter == 3) {
-            $products .= '</tr>';
-        }
+            $counter++;
+            if ($counter == 3) {
+                $products .= '</tr>';
+            }
         }
         echo $products;
     }
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

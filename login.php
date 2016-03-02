@@ -41,7 +41,7 @@ if(isset($_POST['login'])) {
 
 <body>
 
-<div class="login">
+<div id="login">
     <ul>
         <li><a href="home.php">Home</a></li>
         <li><a href="About.php">About</a></li>
@@ -54,7 +54,7 @@ if(isset($_POST['login'])) {
     </ul>
 </div>
 
-<div id="login">
+<div class="login">
 <h3>Login</h3>
 <form method="post" action="">
     <input type="text" name="email" placeholder="Email"/>
@@ -62,7 +62,7 @@ if(isset($_POST['login'])) {
     <input type="submit" name="login" value="LOGIN"/>
 </form>
 
-<button type="button" href="register.php">Register Here</button>
+<a href="register.php">Register Here</a>
 </div>
 </body>
 </html>
