@@ -31,19 +31,12 @@ if ($conn->connect_error) {
         <li><a href="Contact.php">Contact</a></li>
         <li><a href="Products.php">Products</a></li>
         <li><a href="shoppingCart.php">Shopping Cart</a></li>
-        <li><a href="Checkout.php">Checkout</a></li>
         <li><a href="F.A.Q..php">F.A.Q.</a></li>
-        <li><a href="Account.php">Account</a></li>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <li><a href="login.php">Login</a></li>
         <li class="copyright"> © New York Apartments</li>
     </ul>
 </div>
+
 <h1>About Us</h1>
 <div class="content">
     <div class="aboutContent">

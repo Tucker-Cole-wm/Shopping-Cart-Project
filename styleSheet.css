@@ -19,6 +19,7 @@ li a {
     filter: alpha(opacity=40); /* For IE8 and earlier */
     font-size: 2em;
 }
+
 li.copyright {
     font-size: 20px;
 }
@@ -34,16 +35,16 @@ li a:hover {
     color: white;
 }
 
+/* body tag for the home page*/
 body {
     background-image: url("http://archwall.xyz/wp-content/uploads/2015/10/skyscrapers-new-york-reflection-skyscrapers-city-lights-harbour-night-panorama-pictures.jpg");
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 body#About {
-    background-image: url("http://www.bitboxnewyork.com/dogecoin/templates/bbox2/images/bg-new-york.jpg");
-    background-size: 100% 1000px;
-    padding: 0;
-    margin: 0;
+    background-image: url("http://iliketowastemytime.com/system/files/new-york-city-winter-sunset-hd-wallpaper.jpg?download=1");
+    background-size: 100%;
 }
 
 body#FAQ {
@@ -67,8 +68,6 @@ h1 {
     font-family: sans-serif;
 }
 
-
-
 div.aboutUl {
     display: inline-block;
 }
@@ -78,5 +77,31 @@ div.aboutContent {
     width: 75%;
     padding-left: 250px;
     background-color: white;
+}
 
+div.productContent {
+    display: inline-block;
+    width: 65%;
+    padding-left: 20%;
+}
+
+div.productTable {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+div.login {
+    display: inline-block;
+    padding-left: 250px;
+    width: 75%;
+    color: white;
+}
+
+#login {
 }

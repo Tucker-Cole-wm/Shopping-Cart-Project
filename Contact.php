@@ -32,16 +32,8 @@ if ($conn->connect_error) {
         <li><a href="Contact.php">Contact</a></li>
         <li><a href="Products.php">Products</a></li>
         <li><a href="shoppingCart.php">Shopping Cart</a></li>
-        <li><a href="Checkout.php">Checkout</a></li>
         <li><a href="F.A.Q..php">F.A.Q.</a></li>
-        <li><a href="Account.php">Account</a></li>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <li><a href="login.php">Login</a></li>
         <li class="copyright"> © New York Apartments</li>
     </ul>
 </div>
@@ -55,6 +47,14 @@ if ($conn->connect_error) {
             <tr>
                 <td>Phone Number</td>
                 <td>Phone Number</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td>Fax</td>
             </tr>
         </table>
     </div>

@@ -1,23 +1,39 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: session2
- * Date: 2/2/16
- * Time: 5:20 PM
- */
+require_once('connect.php');
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-
-//create connection
-$conn = new mysqli($servername, $username, $password);
-
-//check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+function getProducts($conn) {
+    $sql = 'SELECT * FROM products ORDER BY name';
+    $stmt = $conn->prepare($sql);
+    if ($stmt->execute()) {
+        $products = '<tr>';
+        $counter = 0;
+        while ($row = $stmt->fetch()) {
+            if ($counter == 3) {
+                $counter = 0;
+                $products .= '<tr>';
+            }
+            $products .= '
+            <td><img src="'.$row['image'].'" height="300px" width="300px">
+                <p>'.$row['name'].'</p>
+                <p>'.$row['description'].'</p>
+                <p>'.$row['address'].'</p>
+                <p>$'.$row['price'].'</p>
+                <form method="post" action="shoppingCart.php">
+                <input type="hidden" name="id" value="'.$row['id'].'"/>
+                <input type="submit" name="add" value="ADD"/>
+                </form></td>
+        ';
+            $counter++;
+            if ($counter == 3) {
+                $products .= '</tr>';
+            }
+        }
+        echo $products;
+    }
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,41 +50,23 @@ if ($conn->connect_error) {
         <li><a href="Contact.php">Contact</a></li>
         <li><a href="Products.php">Products</a></li>
         <li><a href="shoppingCart.php">Shopping Cart</a></li>
-        <li><a href="Checkout.php">Checkout</a></li>
         <li><a href="F.A.Q..php">F.A.Q.</a></li>
-        <li><a href="Account.php">Account</a></li>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <li><a href="login.php">Login</a></li>
         <li class="copyright"> © New York Apartments</li>
     </ul>
 </div>
 
 <h1>Products</h1>
 <div class="content">
-<div class="aboutContent">
+<div class="productContent">
+    <div class="productTable">
     <table border="1px">
-        <tr>
-            <td>Apartment 1</td>
-            <td>Apartment 2</td>
-            <td>Apartment 3</td>
-        </tr>
-        <tr>
-            <td>Apartment 4</td>
-            <td>Apartment 5</td>
-            <td>Apartment 6</td>
-        </tr>
-        <tr>
-            <td>Apartment 7</td>
-            <td>Apartment 8</td>
-            <td>Apartment 9</td>
-        </tr>
+        <?php
+        getProducts($dbh);
+        ?>
     </table>
+    </div>
 </div>
 </div>
 </body>
-</html>
+</html>x
