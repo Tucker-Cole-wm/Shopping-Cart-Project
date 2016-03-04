@@ -61,7 +61,6 @@ if(isset($_POST['register'])) {
     <input type="text" name="address" value="Address"/>
     <input type="text" name="realtor" value="Realtor"/>
     <input type="submit" name="register" value="Register"/>
-
 </form>
 </body>
 </html>

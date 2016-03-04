@@ -23,7 +23,7 @@ function getToken() {
         header('location:login.php');
     }
 }
-
+echo 'hello world';
 if(isset($_POST['add'])) {
     $id = $_POST['id'];
     echo '<h1 style="color: white;">'.$id.'</h1>';
