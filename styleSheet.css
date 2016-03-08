@@ -62,6 +62,20 @@ body#products {
     background-size: 100%;
 }
 
+body#shoppingCart {
+    background-image: url("http://www.aimgroupny.com/wp-content/uploads/2015/02/bay_bridge_new_york-wallpaper-1920x1080.jpg");
+    background-size: 100%;
+}
+
+body#Checkout {
+    background-image: url("http://www.thebeancounter.com/wp-content/uploads/2014/12/ny.jpg");
+    background-size: 100%;
+}
+
+div.checkoutContent {
+    padding-left: 250px;
+}
+
 h1 {
     text-align: center;
     color: white;

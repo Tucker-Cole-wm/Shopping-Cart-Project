@@ -32,8 +32,25 @@ function getToken() {
 <!DOCTYPE html>
 <head>
     <title>New York Apartments</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css"/>
 </head>
 
-<body>
-<h2>Please wait while we connect you to the shopping cart...</h2>
+<body id="Checkout">
+<div class="aboutUl">
+    <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="About.php">About</a></li>
+        <li><a href="Contact.php">Contact</a></li>
+        <li><a href="Products.php">Products</a></li>
+        <li><a href="shoppingCart.php">Shopping Cart</a></li>
+        <li><a href="F.A.Q..php">F.A.Q.</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li class="copyright"> © New York Apartments</li>
+    </ul>
+</div>
+
+<div class="checkoutContent">
+<h2>Thank you for purchasing our product.</h2>
+</div>
+
 </body>

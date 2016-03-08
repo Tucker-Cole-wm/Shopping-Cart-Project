@@ -15,6 +15,36 @@ function deleteProduct($conn, $id) {
     }
 }
 
+function getProducts($conn) {
+    $token = getToken();
+    $sql = 'SELECT p.name, p.price, p.image, p.description, p.address, op.id FROM users u LEFT JOIN orders o ON u.id = o.users_id AND o.status = "new" LEFT JOIN orders_products op ON o.id = op.orders_id LEFT JOIN products p ON op.products_id = p.id WHERE u.token = ?';
+    $stmt = $conn->prepare($sql);
+    if ($stmt->execute(array($token))) {
+        while ($row = $stmt->fetch()) {
+            if ($counter == 3) {
+                $counter = 0;
+                $products .= '<tr>';
+            }
+            $products .= '
+            <td><img src="'.$row['image'].'" height="300px" width="300px">
+                <p>'.$row['name'].'</p>
+                <p>'.$row['description'].'</p>
+                <p>'.$row['address'].'</p>
+                <p>$'.$row['price'].'</p>
+                <form method="post" action="shoppingCart.php">
+                <input type="hidden" name="id" value="'.$row['id'].'"/>
+                <input type="submit" name="delete" value="DELETE"/>
+                </form></td>
+        ';
+            $counter++;
+            if ($counter == 3) {
+                $products .= '</tr>';
+            }
+        }
+        echo $products;
+    }
+}
+
 function getToken() {
     if (isset($_COOKIE['token'])) {
         return $_COOKIE['token'];
@@ -23,10 +53,8 @@ function getToken() {
         header('location:login.php');
     }
 }
-echo 'hello world';
 if(isset($_POST['add'])) {
     $id = $_POST['id'];
-    echo '<h1 style="color: white;">'.$id.'</h1>';
     addProduct($dbh, $id);
 }
 if(isset($_POST['delete'])) {
@@ -43,7 +71,7 @@ if(isset($_POST['delete'])) {
     <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
 
-<body>
+<body id="shoppingCart">
 <div class="aboutUl">
     <ul>
         <li><a href="home.php">Home</a></li>
@@ -59,11 +87,20 @@ if(isset($_POST['delete'])) {
 <h1>Shopping Cart</h1>
 
 <div>
+    <div class="productContent">
+        <form method="post" action="Checkout.php">
+            <input type="submit" name="Checkout" value="CHECKOUT"/>
+        </form>
+        <div class="productTable">
+            <table border="1px">
     <?php
-    if(isset($_POST['checkout'])) {
-        checkout($dbh);
-    }
+        getProducts($dbh);
     ?>
+
+                </table>
+
+         </div>
+    </div>
 </div>
 
 </body>
